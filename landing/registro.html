@@ -1,0 +1,24 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Agenda una cita | Colombia de Visas</title><meta name="description" content="Agenda una cita con nuestro equipo."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body class="dark-page">
+<header class="simple-head form-brand-head"><a class="brand brand-lockup" href="index.html" aria-label="Colombia de Visas"><img class="brand-mark" src="../assets/images/logo-monogram.png" alt="Logo Colombia de Visas"><span class="brand-name">Colombia de Visas</span></a><a class="pill pill-outline" href="index.html">Volver</a></header>
+<main class="form-page"><div class="form-card"><p class="eyebrow dark">Agenda una cita</p><h1>Cuéntanos qué necesitas</h1><form id="bookingForm" novalidate>
+<label>Nombre completo<input id="nombre" required autocomplete="name" placeholder="Tu nombre"></label>
+<label>Correo electrónico<input id="correo" type="email" required autocomplete="email" placeholder="correo@ejemplo.com"></label>
+<label>Teléfono / WhatsApp<input id="telefono" type="tel" required autocomplete="tel" placeholder="+57..."></label>
+<label>Tipo de servicio<select id="tipoVisa" required><option value="">Selecciona...</option><option>Visa de trabajo</option><option>Visa de inversión</option><option>Visa de estudiante</option><option>Residencia</option><option>Otro</option></select></label>
+<div class="choice-wrap"><p>¿Qué deseas hacer?</p><div id="opcionError" class="field-error" aria-live="polite"></div><label class="choice"><input type="radio" name="opcion" value="agenda"><span>Tienes el presupuesto para agendar con nosotros? <strong>Agenda ya!</strong></span></label><label class="choice"><input type="radio" name="opcion" value="informacion"><span>¿Deseas más información? <strong>Comunícate con nosotros.</strong></span></label></div>
+
+<fieldset class="consent" id="habeasData">
+<legend>Autorización para el tratamiento de datos personales</legend>
+<div class="consent-head">
+<label class="consent-check consent-master"><input type="checkbox" id="aceptaTodo"><span><strong>Acepto todo:</strong> el tratamiento de mis datos personales y recibir información comercial.</span></label>
+<button type="button" class="consent-toggle" id="consentToggle" aria-expanded="false" aria-controls="consentPanel" aria-label="Ver los acuerdos"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+<div id="consentError" class="field-error" aria-live="polite"></div>
+<div class="consent-panel" id="consentPanel" hidden>
+<p class="consent-info">En cumplimiento de la <strong>Ley 1581 de 2012</strong> y sus decretos reglamentarios, <strong data-empresa="razonSocial">[RAZÓN SOCIAL DE LA EMPRESA]</strong> (NIT <span data-empresa="nit">[NIT]</span>) es la responsable del tratamiento de tus datos: nombre, correo, teléfono y tipo de servicio. Los usaremos para <strong>contactarte, agendar tu cita y orientarte sobre tu proceso de visa</strong>. Tienes derecho a conocer, actualizar, rectificar y suprimir tus datos, a pedir prueba de esta autorización y a revocarla, escribiendo a <a data-empresa="email" href="mailto:contacto@colombiadevisas.com">contacto@colombiadevisas.com</a>. No es obligatorio darnos datos sensibles ni responder preguntas sobre ellos. Conoce más en nuestra <a href="../politica-datos.html" target="_blank" rel="noopener">Política de Tratamiento de Datos Personales</a>.</p>
+<label class="consent-check"><input type="checkbox" id="aceptaDatos" required><span><strong>He leído y autorizo</strong> de forma previa, expresa e informada el tratamiento de mis datos personales para las finalidades descritas. <em>(Obligatorio)</em></span></label>
+<label class="consent-check"><input type="checkbox" id="aceptaComercial"><span>Autorizo además recibir información comercial y novedades por WhatsApp, correo o llamada. <em>(Opcional; puedes retirarlo cuando quieras)</em></span></label>
+</div>
+</fieldset>
+<div class="action-area"><button id="agendaBtn" class="pill pill-green hidden" type="submit">Agendar cita</button><button id="contactBtn" class="pill pill-green hidden" type="submit">Contáctanos</button></div><div id="formMsg" class="form-msg hidden" role="status" aria-live="polite"></div></form></div></main>
+<script src="../config.js"></script><script src="../legal.js"></script><script src="js/registro.js"></script></body></html>

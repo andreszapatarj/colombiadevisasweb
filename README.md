@@ -1,46 +1,31 @@
-# Colombia de Visas
+# Colombia de Visas — Web + Landing unificados
 
-Versión responsive inspirada fielmente en la plantilla de referencia:
-1. Hero fotográfico a pantalla completa.
-2. Identidad centrada.
-3. Menú blanco independiente debajo del hero.
-4. Sección introductoria minimalista con cuatro servicios.
-5. Bloque oscuro editorial.
-6. Cita/filosofía.
-7. Sección de contenido.
-8. CTA final.
-9. Página independiente de testimonios.
+```
+index.html · precios.html · testimonios.html   → página web
+politica-datos.html                            → Política de tratamiento de datos (Ley 1581/2012)
+landing/index.html · landing/registro.html     → landing (subsección de la web)
+config.js                                      → TODOS los datos editables (WhatsApp, correo, empresa, endpoint)
+assets/images · assets/videos                  → TODAS las imágenes y videos (carpeta única)
+```
 
-## Cambiar la foto superior
+## Cambiar imágenes y videos (copiar y reemplazar, mismo nombre)
 
-Coloca tu imagen en:
+| Archivo | Dónde aparece | Medida sugerida |
+|---|---|---|
+| assets/images/hero-empresa.jpg | Portada de la web | 1920×900 |
+| assets/images/foto-perfil.jpg | Foto circular del landing | 600×600 |
+| assets/images/logo.jpg · logo-monogram.png | Logos web / landing | — |
+| assets/images/poster-hero-landing.jpg | Portada del video del landing | 1920×850 |
+| assets/images/poster-video-principal.jpg | Portada del video de la web | 1280×720 |
+| assets/images/poster-testimonio-01…04.jpg | Portadas de testimonios | 1280×800 |
+| assets/videos/landing-hero.mp4 | Video principal del landing | MP4 (H.264) |
+| assets/videos/video-principal.mp4 | Video "Conócenos" de la web | MP4 (H.264) |
+| assets/videos/testimonio-01…04.mp4 | Testimonios (landing muestra 01–03, web 01–04) | MP4 (H.264) |
 
-`assets/images/hero-empresa.jpg`
+`testimonio-04.mp4` aún no existe: copia tu video con ese nombre.
 
-El HTML ya apunta a ese archivo. No necesitas tocar el código.
-
-Recomendación: una foto horizontal de buena calidad (idealmente 1920×900 o mayor).
-
-## Cambiar videos
-
-En `assets/videos/`:
-
-- `video-principal.mp4`
-- `testimonio-01.mp4`
-- `testimonio-02.mp4`
-- `testimonio-03.mp4`
-- `testimonio-04.mp4`
-
-## Datos de contacto
-
-Edita `config.js`.
-
-## Publicación
-
-### GitHub Pages
-Sube todo el contenido al repositorio y activa Pages.
-
-### Hostinger
-Sube todo a `public_html`.
-
-No requiere Node.js, PHP ni base de datos.
+## Datos personales (Ley 1581 de 2012)
+1. Completa en `config.js` → `empresa` (razón social, NIT, dirección) y el correo para datos. Los campos marcados en amarillo en la página son los que faltan.
+2. El formulario exige la casilla de autorización (no viene premarcada) y ofrece una casilla opcional para comunicaciones comerciales.
+3. Cada registro se envía con la prueba de autorización (fecha, versión de política, texto aceptado). Para que se guarde, pon la URL de tu backend en `config.js` → `endpointRegistro`. Mientras esté vacío, el formulario solo valida.
+4. Si cambias la política, sube `politica.version` y `politica.fecha`.
